@@ -29,7 +29,24 @@ class HomeView extends StatelessWidget {
             const Gap(24),
             SizedBox(
               height: getHeight(176),
+            ),
+            const Gap(24),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(getFontSize(8))),
               child: Column(
+                children: List.generate(3, (index) => const WalletTile()),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+/*
+child: Column(
                 children: [
                   Row(
                     children: [
@@ -48,19 +65,4 @@ class HomeView extends StatelessWidget {
                   const Gap(16),
                 ],
               ),
-            ),
-            const Gap(24),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(getFontSize(8))),
-              child: Column(
-                children: List.generate(3, (index) => const WalletTile()),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
+ */

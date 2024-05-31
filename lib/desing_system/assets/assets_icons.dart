@@ -11,4 +11,9 @@ class AssetsIcons {
   static const String eyeOff = "${_path}eye-off_icon.svg";
   static const String major = "${_path}major_icon.svg";
   static const String close = "${_path}close_icon.svg";
+  static const String user = "${_path}user_icon.svg";
+  static const String arrow = "${_path}arrow_icon.svg";
+
+
+  static const String bank = "${_path}bank_icon.svg";
 }

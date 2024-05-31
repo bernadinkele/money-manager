@@ -9,8 +9,8 @@ class WalletTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: const Color(0xFFDADCE0), width: 0.5),
-        borderRadius: BorderRadius.circular(getFontSize(8))
+       // border: Border.all(color: const Color(0xFFDADCE0), width: 0.5),
+       // borderRadius: BorderRadius.circular(getFontSize(8))
       ),
       padding: EdgeInsets.symmetric(
           horizontal: getWidth(
