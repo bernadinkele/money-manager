@@ -4,11 +4,13 @@ import 'package:gap/gap.dart';
 import 'package:money_manager/app/app_dimensions/app_dimensions.dart';
 
 class BottomBarItem extends StatelessWidget {
-  const BottomBarItem({super.key, required this.tab});
+  const BottomBarItem({super.key, required this.tab, required this.onTap});
   final Map<String, dynamic> tab;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+        onTap: onTap,
         child: Column(
           children: [
             SvgPicture.asset(

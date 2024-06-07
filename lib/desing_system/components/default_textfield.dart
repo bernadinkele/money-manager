@@ -2,19 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:money_manager/app/app_dimensions/app_dimensions.dart';
 
 class DefaultTextField extends StatelessWidget {
-  const DefaultTextField({super.key});
-
+  const DefaultTextField(
+      {super.key,
+      required this.controller,
+      required this.hintText,
+      required this.type});
+  final TextEditingController controller;
+  final String hintText;
+  final TextInputType type;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: getHeight(44),
-      child: TextField(
+      child: TextFormField(
+        controller: controller,
+        keyboardType: type,
+        
         decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
                 horizontal: getWidth(16), vertical: getHeight(12)),
             filled: true,
             fillColor: Colors.white,
-            hintText: "Account name",
+            hintText: hintText,
             hintStyle: TextStyle(
                 fontFamily: "Nunito",
                 fontWeight: FontWeight.w500,

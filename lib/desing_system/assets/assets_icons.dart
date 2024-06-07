@@ -14,6 +14,14 @@ class AssetsIcons {
   static const String user = "${_path}user_icon.svg";
   static const String arrow = "${_path}arrow_icon.svg";
 
-
   static const String bank = "${_path}bank_icon.svg";
+
+  static const String check = "${_path}check_icon.svg";
+  static const String delete = "${_path}delete_icon.svg";
+  static const String percent = "${_path}percent_icon.svg";
+  static const String coins = "${_path}coins_icon.svg";
+
+
+  static const String astroCash = "${_path}astro_cash_icon.svg";
+  static const String wallet = "${_path}wallet_icon.svg";
 }

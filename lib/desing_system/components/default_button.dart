@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:money_manager/app/app_dimensions/app_dimensions.dart';
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({super.key});
-
+  const DefaultButton({super.key, required this.onTap});
+final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -11,10 +11,10 @@ class DefaultButton extends StatelessWidget {
       height: getHeight(44),
       child: FilledButton(
         style: ButtonStyle(
-            backgroundColor: const MaterialStatePropertyAll(Colors.black),
-            shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+            backgroundColor: const WidgetStatePropertyAll(Colors.black),
+            shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(getFontSize(8))))),
-        onPressed: () {},
+        onPressed:onTap,
         child: Text(
           "Create",
           style: TextStyle(

@@ -3,8 +3,10 @@ import 'package:gap/gap.dart';
 import 'package:money_manager/app/app_dimensions/app_dimensions.dart';
 
 class DefaultNumberField extends StatelessWidget {
-  const DefaultNumberField({super.key});
-
+  const DefaultNumberField(
+      {super.key, required this.onChange, required this.value});
+  final Function(bool) onChange;
+  final bool value;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,9 +34,9 @@ class DefaultNumberField extends StatelessWidget {
           )),
           const Gap(16),
           Switch(
-            value: true,
-
-            onChanged: (value) {},
+            value: value,
+            activeColor: const Color(0xFF34C759),
+            onChanged: onChange,
           )
         ],
       ),
