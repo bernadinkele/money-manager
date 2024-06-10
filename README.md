@@ -23,9 +23,4 @@ MoneyManager is a Flutter application designed to help users easily track their 
         flutter pub get
         flutter run
 
-2**Projet Structure:**
-lib/
-├── models/        # Data models (wallet, expense, category)
-├── screens/       # UI screens (wallet_creation, expense_recording, etc.)
-├── services/      # API interaction, data fetching
-└── widgets/       # Reusable UI components
+
