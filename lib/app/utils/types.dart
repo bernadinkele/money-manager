@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:money_manager/desing_system/assets/assets_icons.dart';
 
 enum DropdownType { icon, text, color }
@@ -29,3 +27,7 @@ final accountsItem = <TextType>[
   ('Medium', 'Medium'),
 ];
 
+final categoriesTypes = <TextType>[
+  ('Expenses', 'Expenses'),
+  ('Incomes', 'Incomes'),
+];

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_manager/app/routes/routes_name.dart';
-import 'package:money_manager/features/wallet/views/add_new_category_view.dart';
+import 'package:money_manager/features/expenses/views/add_new_category_view.dart';
 import 'package:money_manager/features/expenses/views/add_new_expense_view.dart';
 import 'package:money_manager/features/wallet/views/add_wallet_view.dart';
 import 'package:money_manager/main_view.dart';

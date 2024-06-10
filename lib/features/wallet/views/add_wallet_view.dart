@@ -8,6 +8,7 @@ import 'package:money_manager/desing_system/components/default_dropdown.dart';
 import 'package:money_manager/desing_system/components/default_numberfield.dart';
 import 'package:money_manager/desing_system/components/default_textfield.dart';
 import 'package:money_manager/desing_system/components/secondary_appbar.dart';
+import 'package:money_manager/desing_system/utils/utils.dart';
 import 'package:money_manager/features/wallet/bloc/wallet_bloc.dart';
 
 class AddWalletView extends StatefulWidget {
@@ -41,29 +42,6 @@ class _AddWalletViewState extends State<AddWalletView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-        /*
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: getWidth(24)),
-              decoration: const BoxDecoration(color: Colors.white),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Gap(12),
-                  Text(
-                    "Preview",
-                    style: TextStyle(
-                        fontFamily: "Nunito",
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xFF006AE0),
-                        fontSize: getFontSize(14)),
-                  ),
-                  const Gap(8),
-                  //const WalletTile(),
-                  const Gap(12)
-                ],
-              ),
-            ),
-        */
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: getWidth(24)),
                 child: Form(
@@ -170,6 +148,7 @@ class _AddWalletViewState extends State<AddWalletView> {
                             currency: currency!.$1));
                         context.read<WalletBloc>().add(GetWalletsEvents());
                         Navigator.pop(context);
+                        showSuccesMesssage(context: context, content: "New Wallet added");
                        }
                       })
                     ],

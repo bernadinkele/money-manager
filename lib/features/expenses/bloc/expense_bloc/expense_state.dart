@@ -11,6 +11,10 @@ class NewExpenseCreatedState extends ExpenseState {}
 
 class GettingExpensesState extends ExpenseState {}
 
-class ExpensesGettedState extends ExpenseState {
+class ExpensesErrorState extends ExpenseState {}
 
+class ExpensesGettedState extends ExpenseState {
+  final List<Expense> expenses;
+
+  ExpensesGettedState(this.expenses);
 }

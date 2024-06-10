@@ -22,6 +22,8 @@ dependencies:
   path_provider: ^2.1.3
   flutter_bloc: ^8.1.5
   get_it: ^7.7.0
+  math_expressions: ^2.5.0
+  another_flushbar: ^1.12.30
   dartz: ^0.10.1
   equatable: ^2.0.5
 

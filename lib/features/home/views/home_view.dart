@@ -37,8 +37,49 @@ class _HomeViewState extends State<HomeView> {
       appBar: PreferredSize(
           preferredSize: Size(double.infinity, getHeight(56)),
           child: CustomAppBar(
-            onTap: () => Navigator.pushNamed(context, RoutesNames.addWallet),
-          )),
+              onTap: () => showDialog(
+                    context: context,
+                    builder: (context) {
+                      return Dialog(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(getFontSize(16))),
+                        child: IntrinsicHeight(
+                          child: Container(
+                            padding: const EdgeInsets.all(24),
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                  onTap: () => Navigator.popAndPushNamed(
+                                      context, RoutesNames.addNewCategory),
+                                  child: const Row(
+                                    children: [
+                                      Icon(Icons.add),
+                                      Gap(8),
+                                      Text("Create new Category")
+                                    ],
+                                  ),
+                                ),
+                                const Gap(24),
+                                GestureDetector(
+                                  onTap: () => Navigator.popAndPushNamed(
+                                      context, RoutesNames.addWallet),
+                                  child: const Row(
+                                    children: [
+                                      Icon(Icons.add),
+                                      Gap(8),
+                                      Text("Create Wallet")
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ))),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: getWidth(24)),
         child: Column(
@@ -74,7 +115,12 @@ class _HomeViewState extends State<HomeView> {
                     }
                     if (state is WalletsGettedState) {
                       return Column(
-                        children: state.wallets.map((e) =>WalletTile(wallet: e,activeBorder: false,) ).toList(),
+                        children: state.wallets
+                            .map((e) => WalletTile(
+                                  wallet: e,
+                                  activeBorder: false,
+                                ))
+                            .toList(),
                       );
                     } else {
                       return Text(state.toString());
