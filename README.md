@@ -18,9 +18,9 @@ MoneyManager is a Flutter application designed to help users easily track their 
    ```bash
    git clone https://github.com/bernadinkele/money-manager.git
 
-2**Install dependencies:** 
-    ```bash
-        flutter pub get
-        flutter run
+1. **Install dependencies:**
+   ```bash
+   flutter pub get
+   flutter run
 
 
