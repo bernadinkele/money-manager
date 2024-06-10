@@ -38,6 +38,9 @@ class _AddNewExpenseState extends State<AddNewExpense> {
     context.read<WalletBloc>().add(
           GetWalletsEvents(),
         );
+    context
+        .read<CategoryBloc>()
+        .add(GetCategoriesEvent());
     return Scaffold(
       backgroundColor: const Color(0xFFF6F7F9),
       body: Column(

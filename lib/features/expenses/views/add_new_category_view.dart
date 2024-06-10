@@ -100,12 +100,13 @@ class _AddNewCategoryViewState extends State<AddNewCategoryView> {
                               colorHex: color!.$1,
                               currency: currency!.$1,
                               description: descriptionFieldController.text));
-                          context
-                              .read<CategoryBloc>()
-                              .add(GetCategoriesEvent());
+
                           Navigator.pop(context);
                           showSuccesMesssage(
                               context: context, content: "new Category Added");
+                          context
+                              .read<CategoryBloc>()
+                              .add(GetCategoriesEvent());
                         } else {
                           showErrorMesssage(
                               context: context,
