@@ -16,13 +16,13 @@ class AppDimensions {
 }
 
 double getHeight(double inputHeight) {
-  double screenHeight = AppDimensions.height;
-  return (inputHeight / 812.0) * screenHeight;
+  //double screenHeight = AppDimensions.height;
+  return inputHeight;
 }
 
 double getWidth(double inputWidth) {
   double screenWidth = AppDimensions.width;
-  return (inputWidth / 375.0) * screenWidth;
+  return inputWidth;
 }
 
 double getFontSize(double px) {
