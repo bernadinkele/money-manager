@@ -4,7 +4,7 @@ MoneyManager, an expense recording app that allows users to record their dialy e
 
 
 # MoneyManager - A Simple Expense Recording App
-MoneyManager is a Flutter application designed to help users easily track their daily expenses. Inspired by the challenges faced by its founders, Mahugnon and Senan, this app aims to provide a user-friendly solution for managing personal finances.
+MoneyManager is a Flutter application designed to help users easily track their daily expenses.
 
 ## Features
 
