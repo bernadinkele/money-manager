@@ -24,3 +24,5 @@ MoneyManager is a Flutter application designed to help users easily track their 
    flutter run
 
 
+Kelebernadin00@gmail.com
+
